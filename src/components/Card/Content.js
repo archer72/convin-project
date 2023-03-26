@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Card, Menu, Dropdown, Button, Space, Modal } from 'antd';
 import { EllipsisOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
@@ -82,7 +83,7 @@ const CustomCard = ({ name, mediaLink, captionLink, id }) => {
       hoverable
       style={{ width: 240 }}
       cover={
-       <img width="240" height="135" src={captionLink} />
+        <Image src={captionLink} height={135} width={240} />
       }
       onClick={handleUploadOpen}
     >
