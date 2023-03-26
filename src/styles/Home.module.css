@@ -1,0 +1,14 @@
+.main {
+}
+
+.sub_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_form{
+    padding: 40px;
+}
+
+
