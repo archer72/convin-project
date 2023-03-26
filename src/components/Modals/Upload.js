@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import { Modal, List } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
@@ -36,7 +37,7 @@ export default function Upload({close, visible, id,  mediaLink, name, mode, vide
       dataSource={videos}
       renderItem={(item, index) => (
         <List.Item style={{cursor:'pointer', marginTop: '10px', display: 'flex', justifyContent:'space-between'}}>
-        <div style={{display:'flex', alignItems:'center'}}><img src={item.captionLink} width="70" height="50" style={{marginRight: 10}}  /> {item.name}</div><p><DeleteOutlined onClick={() => dispatch(removeVideoFromBucket(id, item.id)) } /></p>
+        <div style={{display:'flex', alignItems:'center'}}><Image src={item.captionLink} width={70} height={50} style={{marginRight: 10}} /> {item.name}</div><p><DeleteOutlined onClick={() => dispatch(removeVideoFromBucket(id, item.id)) } /></p>
         </List.Item>
       )}
     />  : <h4>No Videos Added</h4>
